@@ -23,9 +23,8 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard');i
     })->name('dashboard');
 
-    Route::get('student/csv/file/upload', [JobController::class, 'index'])->name('job.management');
-
 });
+Route::get('job/index', [JobController::class, 'index'])->name('job.management');
